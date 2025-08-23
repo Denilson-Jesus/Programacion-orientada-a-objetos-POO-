@@ -1,0 +1,45 @@
+package Libreria_Inventario;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Date;
+public class Repuesto 
+{  
+    String codigo, descripcion;
+    double PreCompra, PreVenta;
+    int Stock;
+
+    public Repuesto(String codigo, String descripcion, double PreCompra, double PreVenta, int Stock) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.PreCompra = PreCompra;
+        this.PreVenta = PreVenta;
+        this.Stock = Stock;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public double getPreCompra() {
+        return PreCompra;
+    }
+
+    public double getPreVenta() {
+        return PreVenta;
+    }
+
+    public int getStock() {
+        return Stock;
+    }
+
+    public void setStock(int Stock) {
+        this.Stock = Stock;
+    }
+//Actualizacion de stock
+public void ActualizarStock(int cantidad)
+{   this.Stock += cantidad;
+}
