@@ -1,0 +1,32 @@
+package Libreria_Inventario;
+public class Proveedor 
+{
+    String nombre, direccion, telefono, email;
+
+    public Proveedor(String nombre, String direccion, String telefono, String email) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.email = email;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    @Override
+    public String toString(){
+    return "Nombre: " + nombre+ "\n Telefono:" + telefono;
+    }
+}
