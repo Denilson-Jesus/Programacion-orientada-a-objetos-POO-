@@ -35,7 +35,10 @@ public class Repuesto
     public int getStock() {
         return Stock;
     }
-
+@Override
+public String toString(){
+return "Codigo: " +codigo+ "Descripcion: " +descripcion+ "Stock: " + Stock;
+}
     public void setStock(int Stock) {
         this.Stock = Stock;
     }
