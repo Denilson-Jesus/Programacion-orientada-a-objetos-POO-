@@ -1,0 +1,42 @@
+package librerias;
+public class Producto 
+{
+     private String codigo;
+    private String nombre;
+    private int cantidad;
+    private double precio;
+    private String proveedor;
+
+    public Producto(String codigo, String nombre, int cantidad, double precio, String proveedor) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.cantidad = cantidad;
+        this.precio = precio;
+        this.proveedor = proveedor;
+    }
+
+    public void restarCantidad(int cantidad) {
+        if (this.cantidad >= cantidad) {
+            this.cantidad -= cantidad;
+        } else {
+            System.out.println("❌ No hay suficiente stock.");
+        }
+    }
+
+    public void agregarCantidad(int cantidad) {
+        this.cantidad += cantidad;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    @Override
+    public String toString() {
+        return "Código: " + codigo +
+               ", Nombre: " + nombre +
+               ", Cantidad: " + cantidad +
+               ", Precio: " + precio +
+               ", Proveedor: " + proveedor;
+    }
+}
