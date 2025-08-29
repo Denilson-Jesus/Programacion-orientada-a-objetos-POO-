@@ -7,7 +7,7 @@ public class Inventario
 
     public void agregarProducto(Producto p) {
         productos.add(p);
-        System.out.println("✅ Producto agregado correctamente.");
+        System.out.println("Producto agregado correctamente.");
     }
 
     public void restarProducto(String codigo, int cantidad) {
@@ -17,12 +17,12 @@ public class Inventario
                 return;
             }
         }
-        System.out.println("❌ Producto no encontrado.");
+        System.out.println("Producto no encontrado.");
     }
 
     public void mostrarProductos() {
         if (productos.isEmpty()) {
-            System.out.println("⚠️ No hay productos en el inventario.");
+            System.out.println("No hay productos en el inventario.");
         } else {
             for (Producto p : productos) {
                 System.out.println(p);
