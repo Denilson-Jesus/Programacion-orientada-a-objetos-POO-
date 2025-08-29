@@ -19,7 +19,7 @@ public class Producto
         if (this.cantidad >= cantidad) {
             this.cantidad -= cantidad;
         } else {
-            System.out.println("❌ No hay suficiente stock.");
+            System.out.println("No hay suficiente stock.");
         }
     }
 
