@@ -29,3 +29,17 @@ public class Inventario
             }
         }
     }
+ public void agregarProveedor(Proveedor prov) {
+        proveedores.add(prov);
+        System.out.println(" Proveedor agregado correctamente.");
+    }
+
+    public void mostrarProveedores() {
+        if (proveedores.isEmpty()) {
+            System.out.println(" No hay proveedores registrados.");
+        } else {
+            for (Proveedor p : proveedores) {
+                System.out.println(p);
+            }
+        }
+    }
