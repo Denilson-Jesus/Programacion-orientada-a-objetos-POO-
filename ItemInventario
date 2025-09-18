@@ -1,0 +1,16 @@
+package librerias;
+public abstract class ItemInventario {
+    protected String codigo;
+    protected String nombre;
+
+    public ItemInventario(String codigo, String nombre) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+    }
+
+    public abstract void mostrarInfo();
+
+    public String getCodigo() {
+        return codigo;
+    }
+}
