@@ -1,0 +1,11 @@
+package librerias;
+public interface Descontable 
+{
+    void restarCantidad(int cantidad);
+}
+
+package librerias;
+public interface Aumentable 
+{
+    void agregarCantidad(int cantidad);
+}
