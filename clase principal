@@ -2,9 +2,8 @@ package inventario_tienda_repuestos;
 import java.util.Scanner;
 import librerias.*;
 public class Inventario_Tienda_Repuestos {
-    public static void main(String[] args) 
-    {
-         Scanner sc = new Scanner(System.in);
+     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Inventario inventario = new Inventario();
 
         int opcion;
@@ -31,8 +30,17 @@ public class Inventario_Tienda_Repuestos {
                     System.out.print("Precio: ");
                     double precio = sc.nextDouble();
                     sc.nextLine();
-                    System.out.print("Proveedor: ");
-                    String proveedor = sc.nextLine();
+
+                    // Pedir proveedor
+                    System.out.print("Nombre del proveedor: ");
+                    String nomProv = sc.nextLine();
+                    System.out.print("RUC: ");
+                    String ruc = sc.nextLine();
+                    System.out.print("Teléfono: ");
+                    String tel = sc.nextLine();
+                    Proveedor proveedor = new Proveedor(nomProv, ruc, tel);
+
+                    inventario.agregarProveedor(proveedor);
                     inventario.agregarProducto(new Producto(codigo, nombre, cantidad, precio, proveedor));
                     break;
 
@@ -50,12 +58,12 @@ public class Inventario_Tienda_Repuestos {
 
                 case 4:
                     System.out.print("Nombre del proveedor: ");
-                    String nomProv = sc.nextLine();
+                    String nom = sc.nextLine();
                     System.out.print("RUC: ");
-                    String ruc = sc.nextLine();
+                    String rucProv = sc.nextLine();
                     System.out.print("Teléfono: ");
-                    String tel = sc.nextLine();
-                    inventario.agregarProveedor(new Proveedor(nomProv, ruc, tel));
+                    String telProv = sc.nextLine();
+                    inventario.agregarProveedor(new Proveedor(nom, rucProv, telProv));
                     break;
 
                 case 5:
@@ -71,5 +79,4 @@ public class Inventario_Tienda_Repuestos {
             }
         } while (opcion != 6);
     }
-    
 }
