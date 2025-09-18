@@ -1,6 +1,5 @@
 package librerias;
-public class Proveedor 
-{
+public class Proveedor {
     private String nombre;
     private String ruc;
     private String telefono;
@@ -9,6 +8,10 @@ public class Proveedor
         this.nombre = nombre;
         this.ruc = ruc;
         this.telefono = telefono;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     @Override
