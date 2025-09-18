@@ -1,7 +1,6 @@
 package librerias;
 import java.util.ArrayList;
-public class Inventario 
-{
+public class Inventario {
     private ArrayList<Producto> productos = new ArrayList<>();
     private ArrayList<Proveedor> proveedores = new ArrayList<>();
 
@@ -22,16 +21,17 @@ public class Inventario
 
     public void mostrarProductos() {
         if (productos.isEmpty()) {
-            System.out.println("No hay productos en el inventario.");
+            System.out.println(" No hay productos en el inventario.");
         } else {
             for (Producto p : productos) {
-                System.out.println(p);
+                p.mostrarInfo();
             }
         }
     }
- public void agregarProveedor(Proveedor prov) {
+
+    public void agregarProveedor(Proveedor prov) {
         proveedores.add(prov);
-        System.out.println(" Proveedor agregado correctamente.");
+        System.out.println("Proveedor agregado correctamente.");
     }
 
     public void mostrarProveedores() {
@@ -43,3 +43,4 @@ public class Inventario
             }
         }
     }
+}
