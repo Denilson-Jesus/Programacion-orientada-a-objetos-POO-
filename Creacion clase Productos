@@ -1,34 +1,35 @@
 package librerias;
-public class Producto 
-{
-     private String codigo;
-    private String nombre;
+public class Producto extends ItemInventario implements Descontable, Aumentable {
     private int cantidad;
     private double precio;
-    private String proveedor;
+    private Proveedor proveedor;  
 
-    public Producto(String codigo, String nombre, int cantidad, double precio, String proveedor) {
-        this.codigo = codigo;
-        this.nombre = nombre;
+    public Producto(String codigo, String nombre, int cantidad, double precio, Proveedor proveedor) {
+        super(codigo, nombre); 
         this.cantidad = cantidad;
         this.precio = precio;
         this.proveedor = proveedor;
     }
 
+    @Override
     public void restarCantidad(int cantidad) {
         if (this.cantidad >= cantidad) {
             this.cantidad -= cantidad;
+            System.out.println(" Se restaron " + cantidad + " unidades de " + nombre);
         } else {
-            System.out.println("No hay suficiente stock.");
+            System.out.println(" No hay suficiente stock.");
         }
     }
 
+    @Override
     public void agregarCantidad(int cantidad) {
         this.cantidad += cantidad;
+        System.out.println("Se agregaron " + cantidad + " unidades de " + nombre);
     }
 
-    public String getCodigo() {
-        return codigo;
+    @Override
+    public void mostrarInfo() { 
+        System.out.println(this);
     }
 
     @Override
@@ -37,6 +38,6 @@ public class Producto
                ", Nombre: " + nombre +
                ", Cantidad: " + cantidad +
                ", Precio: " + precio +
-               ", Proveedor: " + proveedor;
+               ", " + proveedor;
     }
 }
